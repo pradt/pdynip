@@ -22,7 +22,7 @@ type NamecheapProvider struct {
 }
 
 // namecheapAPIEndpoint is the base URL for Namecheap's Dynamic DNS API
-const namecheapAPIEndpoint = "https://dynamicdns.park-your-domain.com/update"
+var namecheapAPIEndpoint = "https://dynamicdns.park-your-domain.com/update"
 
 // NewNamecheapProvider initializes a new NamecheapProvider
 func NewNamecheapProvider(apiKey string) *NamecheapProvider {

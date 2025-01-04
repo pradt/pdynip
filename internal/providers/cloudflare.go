@@ -22,7 +22,7 @@ type CloudflareProvider struct {
 }
 
 // cloudflareAPIEndpoint is the base URL for Cloudflare's API
-const cloudflareAPIEndpoint = "https://api.cloudflare.com/client/v4"
+var cloudflareAPIEndpoint = "https://api.cloudflare.com/client/v4"
 
 // NewCloudflareProvider initializes a new CloudflareProvider
 func NewCloudflareProvider(apiKey, email string) *CloudflareProvider {

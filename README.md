@@ -3,9 +3,9 @@
 `PDynIP` is a lightweight utility to update DNS records dynamically when your public IP address changes. It supports both **Cloudflare** and **Namecheap** DNS providers and is packaged as a Docker container for easy deployment.
 
 ## Why is this here ?
-I changed ISPs can I no longer had a static IP, instead I had a dynamic IP. This made calling specific services at home a lot a more difficult when I'm on the road such as VPNs. I had a look at dynamic ip services, which most routers now support ootb I found them to be really clunky. I also just wanted to use my own domain which I was already paying for (Dynamic IP services charged extra for this, and getting a static IP was going to cheaper in my case).
+I recently switched ISPs and lost my static IP, leaving me with a dynamic IP instead. This made accessing certain services at home, like VPNs, much more difficult while on the road. I explored dynamic DNS services, which most modern routers support out of the box, but I found them clunky and inconvenient. Additionally, I wanted to use my own domain, which I was already paying for. Many dynamic DNS providers charged extra for custom domains, and in my case, upgrading to a static IP would have been more cost-effective.
 
-Anyway I made this for my specific usecase, to update namecheap and cloudflare hostanems with my  IP. I'm happy to add other services if they have an API or if you want to add this feature please go right ahead. 
+To address this, I created a solution tailored to my specific needs: a tool to update my Namecheap and Cloudflare hostnames with my current IP address. If other dynamic DNS services offer APIs, I’m happy to add support for them. Alternatively, feel free to contribute and add this functionality yourself!
 
 ---
 
@@ -120,6 +120,6 @@ docker logs -f pdynip-namecheap
 
 ## Help and Support
 
-The best way to run this is via docker, see above. If you want to download the source and compile it yourself then you are welcome to do so. Please note that support would be limited in this case. 
+The easiest way to run this is with Docker (instructions above). However, if you prefer to download the source code and compile it yourself, you’re welcome to do so! Just keep in mind that support for manually compiled setups may be limited.
 
-If you are running it via Docker, and you run into any problems then open an issue. You should include the log information ( careful to ommit any ip information if you want it to be confidential). 
+If you're using Docker and encounter any issues, feel free to open an issue on the project’s repository. When reporting a problem, please include relevant log information—just make sure to omit any sensitive IP details if you’d like to keep them confidential.
